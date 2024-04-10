@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Appoint. Details{% endblock title %}
+{% block content %}
+    <div class="appointment_card">
+        <div class="card_background card center p-5 " style="max-width: 50rem;">
+            <h2 class=" appointment_date_time">{{appointment.appointment_date_time|format_date}}</h2>
+            <h3 class=" appointment_client">Client Details: {{appointment.user.first_name}} {{ appointment.user.last_name }}</h3>
+            <p class=" appointment_details">Appointment Details: {{appointment.appointment_type}}</p>
+            <p class=" appointment_details">Comments: {{appointment.comments}}</p>
+        </div>
+    </div>
+{% endblock content %}

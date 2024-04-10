@@ -1,0 +1,32 @@
+/* ========================= LOGIN AND REGISTRATION PAGE =========================*/
+.login_page{
+    display: flex;
+    background-image:url("./img/Lissie_working.jpg");
+    background-size:cover;
+    gap: 75px;
+}
+.login, .register{
+    background: radial-gradient(circle at -1% 57.5%, rgb(235, 178, 171) 0%, #FFEAEC 100%);
+    /* background: linear-gradient(120deg, rgb(235, 178, 171) 0%, #FFEAEC 100%); */
+    border: solid 2px #57423F;
+    color: #57423F;
+    max-width: 20rem;
+    height: fit-content;
+}
+.btn_reg_login {
+    border-color: #57423F;
+    width: 13rem;
+    color: #57423F;
+}
+/* ========================= NAVBAR BASE =========================*/
+.navbar{
+    background-color: #FFEAEC !important;
+}
+.nav_logo{
+    width: 50px;
+}
+
+.new_appointment{
+    background-image: url(./img/nail_pink_background.jpg);
+    background-size: contain;
+}

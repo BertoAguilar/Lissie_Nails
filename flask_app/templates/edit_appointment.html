@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Edit Appointment {% endblock title %}
+{% block content %}
+    <div class="edit_appointment_card card p-5 mt-5 mx-auto mb-3 text-center" style="max-width: 20rem;">
+        <h2>Edit A Appointment</h2>
+        <form action="/update_appointment" method="post">
+            <input type="hidden" name="appointment_id" value="{{appointment.id}}">
+            <label class="form-label mt-3" for="appointment_date_time">Appointment Date and Time</label>
+            <input type="datetime-local" name="appointment_date_time" id="appointment_date_time" value="{{ appointment.appointment_date_time }}" class="text-center" class="text-center">
+            <br>
+            <label class="form-label mt-3" for="appointment_type">Appointment Type</label>
+            <input type="text" name="appointment_type" id="appointment_type" value="{{ appointment.appointment_type }}" class="text-center">
+            <br>
+            <label class="form-label mt-3" for="comments">Comments</label>
+            <input type="text" name="comments" id="comments" value="{{ appointment.comments }}" class="text-center">
+            <br>
+            <button type="submit" class="btn btn-lg btn-outline-light mt-5">Submit</button>
+            <div class="edit_error mt-3 text-center" style="color: red";>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <p>{{message}}</p>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </div>
+        </form>
+    </div>
+{% endblock content %}
